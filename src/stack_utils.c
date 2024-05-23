@@ -6,11 +6,20 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 19:07:56 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/05/21 20:33:29 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/05/23 13:57:42 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
+
+t_stack_node	*ft_stack_last(t_stack_node *stack)
+{
+	if (!stack)
+		return (NULL);
+	while (stack->next != NULL)
+		stack = stack->next;
+	return (stack);
+}
 
 void	ft_stack_free(t_stack_node **a)
 {
@@ -48,7 +57,7 @@ void	ft_stack_append(t_stack_node **stack, int nb)
 	}
 	else
 	{
-		last_node = ft_lstlast((*stack));
+		last_node = ft_stack_last((*stack));
 		last_node->next = node;
 		node->prev = last_node;
 	}

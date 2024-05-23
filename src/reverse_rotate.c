@@ -6,20 +6,71 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 22:03:00 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/05/21 22:07:07 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/05/23 15:29:41 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
-void	ft_reverse_rotate(t_stack_node **stack)
+static void	ft_reverse_rotate(t_stack_node **stack)
 {
 	t_stack_node	*last;
+	t_stack_node	*first;
 
-	last = ft_lstlast(*stack);
-	last->next = (*stack);
+	if (!stack || !(*stack) || !(*stack)->next)
+		return ;
+	last = ft_stack_last(*stack);
+	first = (*stack);
+	last->next = first;
+	first->prev = last;
 	last->prev->next = NULL;
 	last->prev = NULL;
-	(*stack)->prev = last;
 	(*stack) = last;
 }
+
+void	rra(t_stack_node **a)
+{
+	ft_reverse_rotate(a);
+	ft_putstr_fd("rra\n", STDOUT_FILENO);
+}
+
+void	rrb(t_stack_node **b)
+{
+	ft_reverse_rotate(b);
+	ft_putstr_fd("rrb\n", STDOUT_FILENO);
+}
+
+void	rrr(t_stack_node **a, t_stack_node **b)
+{
+	ft_reverse_rotate(a);
+	ft_reverse_rotate(b);
+	ft_putstr_fd("rrr\n", STDOUT_FILENO);
+}
+
+// int main()
+// {
+// 	t_stack_node	*a;
+// 	t_stack_node	*test1;
+// 	t_stack_node	*test2;
+
+// 	a = NULL;
+// 	ft_stack_append(&a, 10);
+// 	ft_stack_append(&a, 15);
+// 	ft_stack_append(&a, 20);
+// 	ft_stack_append(&a, 25);
+// 	test1 = a;
+// 	test2 = a;
+// 	while (test1)
+// 	{
+// 		printf("nb : %d\n", test1->nb);
+// 		test1 = test1->next;
+// 	}
+// 	rra(&a);
+// 	printf("test\n");
+// 	test2 = a;
+// 	while (test2)
+// 	{
+// 		printf("nb : %d\n", test2->nb);
+// 		test2 = test2->next;
+// 	}
+// }

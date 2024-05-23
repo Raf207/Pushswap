@@ -6,39 +6,71 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 21:54:51 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/05/21 22:02:17 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/05/23 15:29:06 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
-void	ft_rotate(t_stack_node **stack)
+static void	ft_rotate(t_stack_node **stack)
 {
 	t_stack_node	*last;
+	t_stack_node	*first;
 
-	last = ft_lstlast(*stack);
-	last->next = (*stack);
-	(*stack)->prev = last;
-	(*stack)->next->prev = NULL;
-	(*stack) = (*stack)->next;
-	last->next->next = NULL;
+	if (!stack || !(*stack) || !(*stack)->next)
+		return ;
+	last = ft_stack_last(*stack);
+	first = (*stack);
+	last->next = first;
+	first->prev = last;
+	(*stack) = first->next;
+	(*stack)->prev = NULL;
+	first->next = NULL;
 }
 
 void	ra(t_stack_node **a)
 {
 	ft_rotate(a);
-	ft_putstr("ra\n");
+	ft_putstr_fd("ra\n", STDOUT_FILENO);
 }
 
 void	rb(t_stack_node **b)
 {
 	ft_rotate(b);
-	ft_putstr("rb\n");
+	ft_putstr_fd("rb\n", STDOUT_FILENO);
 }
 
 void	rr(t_stack_node **a, t_stack_node **b)
 {
 	ft_rotate(a);
 	ft_rotate(b);
-	ft_putstr("rr\n");
+	ft_putstr_fd("rr\n", STDOUT_FILENO);
 }
+
+// int main()
+// {
+// 	t_stack_node	*a;
+// 	t_stack_node	*test1;
+// 	t_stack_node	*test2;
+
+// 	a = NULL;
+// 	ft_stack_append(&a, 10);
+// 	ft_stack_append(&a, 15);
+// 	ft_stack_append(&a, 20);
+// 	ft_stack_append(&a, 25);
+// 	test1 = a;
+// 	test2 = a;
+// 	while (test1)
+// 	{
+// 		printf("nb : %d\n", test1->nb);
+// 		test1 = test1->next;
+// 	}
+// 	ra(&a);
+// 	printf("test\n");
+// 	test2 = a;
+// 	while (test2)
+// 	{
+// 		printf("nb : %d\n", test2->nb);
+// 		test2 = test2->next;
+// 	}
+// }
