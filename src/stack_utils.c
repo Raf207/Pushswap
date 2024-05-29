@@ -12,15 +12,6 @@
 
 #include "../include/push_swap.h"
 
-t_stack_node	*ft_stack_last(t_stack_node *stack)
-{
-	if (!stack)
-		return (NULL);
-	while (stack->next != NULL)
-		stack = stack->next;
-	return (stack);
-}
-
 void	ft_stack_free(t_stack_node **a)
 {
 	t_stack_node	*temp;
