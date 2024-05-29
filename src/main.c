@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 16:37:16 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/05/29 13:08:30 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/05/29 13:10:57 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main (int ac, char **av)
 	ft_stack_init(&a, av + 1);
 	if (!ft_stack_sorted(a))
 	{
-		if(ft_stack_len(a) == 2)
+		if (ft_stack_len(a) == 2)
 			sa(a);
 		else if (ft_stack_len(a) == 3)
 			ft_sort_3(&a);

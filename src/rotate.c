@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 21:54:51 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/05/23 15:29:06 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/05/29 13:32:13 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,14 @@ void	rr(t_stack_node **a, t_stack_node **b)
 	ft_rotate(a);
 	ft_rotate(b);
 	ft_putstr_fd("rr\n", STDOUT_FILENO);
+}
+
+void	ft_rotate_a_b(t_stack_node **a, t_stack_node **b, t_stack_node *cheap)
+{
+	while ((*b) != cheap->target_node && (*a) != cheap)
+		rr(a, b);
+	ft_index_median((*a));
+	ft_index_median((*b));
 }
 
 // int main()

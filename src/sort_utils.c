@@ -27,13 +27,13 @@ void	ft_target_a(t_stack_node *a, t_stack_node *b)
 	t_stack_node	*target;
 	long			closest_small_nb;
 
-	while(a)
+	while (a)
 	{
 		closest_small_nb = LONG_MIN;
 		curren_b = b;
 		while (curren_b)
 		{
-			if(curren_b->nb < a->nb
+			if (curren_b->nb < a->nb
 				&& curren_b->nb > closest_small_nb)
 			{
 				closest_small_nb = curren_b->nb;

@@ -26,6 +26,23 @@ t_stack_node	*ft_stack_biggest(t_stack_node *stack)
 	return (biggest);
 }
 
+t_stack_node	*ft_stack_smallest(t_stack_node *stack)
+{
+	t_stack_node	*smallest;
+
+	if (!stack)
+		return (NULL);
+	smallest = stack;
+	stack = stack->next;
+	while (stack)
+	{
+		if (smallest->nb > stack->nb)
+			smallest = stack;
+		stack = stack->next;
+	}
+	return (smallest);
+}
+
 t_stack_node	*ft_stack_cheapest(t_stack_node *stack)
 {
 	if (!stack)
