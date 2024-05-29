@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 15:19:42 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/05/29 14:24:15 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/05/29 15:02:38 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ typedef struct s_stack_node
 char			**ft_splitt(char const *s, char c);
 void			ft_invalid_input(t_stack_node **stack);
 int				ft_str_error(char *str_n);
+int				ft_dup_error(t_stack_node **stack, long nb);
 void			ft_stack_free(t_stack_node **a);
 void			ft_stack_append(t_stack_node **stack, int nb);
 void			ft_stack_init(t_stack_node **stack, char **av);
@@ -46,7 +47,6 @@ t_stack_node	*ft_stack_last(t_stack_node *stack);
 t_stack_node	*ft_stack_biggest(t_stack_node *stack);
 t_stack_node	*ft_stack_cheapest(t_stack_node *stack);
 t_stack_node	*ft_stack_smallest(t_stack_node *stack);
-void			ft_swap(t_stack_node **stack);
 void			pa(t_stack_node **a, t_stack_node **b);
 void			pb(t_stack_node **b, t_stack_node **a);
 void			ss(t_stack_node **a, t_stack_node **b);
@@ -68,5 +68,7 @@ void			ft_sort_3(t_stack_node **a);
 void			ft_init(t_stack_node *a, t_stack_node *b);
 void			ft_init_b(t_stack_node *a, t_stack_node *b);
 void			ft_min_top(t_stack_node **a);
+void			ft_sort_all(t_stack_node **a, t_stack_node **b);
+void			ft_index_median(t_stack_node *stack);
 
 #endif

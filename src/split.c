@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 16:40:39 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/05/21 18:44:38 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/05/29 15:00:50 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ static char	*ft_lettercount(char const *s, char c, char **rep, int word)
 	return (rep[word]);
 }
 
-static char	**ft_init(char const *s, char c)
+static char	**ft_initt(char const *s, char c)
 {
 	int		wordcount;
 	int		i;
@@ -104,7 +104,7 @@ char	**ft_splitt(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	rep = ft_init(s, c);
+	rep = ft_initt(s, c);
 	if (!rep)
 		return (NULL);
 	rep[0] = malloc (sizeof(char));

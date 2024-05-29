@@ -46,11 +46,12 @@ t_stack_node	*ft_stack_smallest(t_stack_node *stack)
 t_stack_node	*ft_stack_cheapest(t_stack_node *stack)
 {
 	if (!stack)
-		return ;
+		return (NULL);
 	while (stack)
 	{
 		if (stack->cheapest)
 			return (stack);
 		stack = stack->next;
 	}
+	return (stack);
 }

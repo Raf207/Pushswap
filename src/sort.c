@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 16:17:22 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/05/29 14:18:20 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/05/29 14:59:27 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,6 @@ void	ft_a_to_b(t_stack_node **a, t_stack_node **b)
 
 void	ft_b_to_a(t_stack_node **a, t_stack_node **b)
 {
-	t_stack_node	*cheap_node;
-
 	ft_stack_ready(a, (*b)->target_node, 'a');
 	pa(a, b);
 }
@@ -73,7 +71,7 @@ void	ft_sort_all(t_stack_node **a, t_stack_node **b)
 {
 	int	len_a;
 
-	len_a = ft_stack_len(a);
+	len_a = ft_stack_len(*a);
 	if (len_a-- > 3 && !ft_stack_sorted(*a))
 		pb(b, a);
 	if (len_a-- > 3 && !ft_stack_sorted(*a))
