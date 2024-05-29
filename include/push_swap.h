@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 15:19:42 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/05/29 14:21:55 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/05/29 14:24:15 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,6 @@ void			ft_rev_rotate_a_b(t_stack_node **a,
 void			ft_sort_3(t_stack_node **a);
 void			ft_init(t_stack_node *a, t_stack_node *b);
 void			ft_init_b(t_stack_node *a, t_stack_node *b);
-void			ft_min_top(t_stack_node **a)
+void			ft_min_top(t_stack_node **a);
 
 #endif
