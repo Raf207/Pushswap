@@ -1,5 +1,5 @@
 NAME = push_swap
-BONUS_NAME = so_long_bonus
+BONUS_NAME = checker
 
 LIBFT = ./libft/libft.a
 
@@ -15,7 +15,7 @@ BONUS_SRC_DIR = src_bonus/
 BONUS_OBJ_DIR = obj_bonus/
 
 SRC_FILES = errors main push reverse_rotate rotate sort_utils_b sort_utils sort split stack_find stack_init stack_utils swap
-BONUS_SRC_FILES = 
+BONUS_SRC_FILES = errors main split stack_init stack_utils instructions operations
 
 OBJ = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))

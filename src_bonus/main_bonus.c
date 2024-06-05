@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 16:37:16 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/06/05 17:52:40 by rafnasci         ###   ########.fr       */
+/*   Created: 2024/06/05 14:24:48 by rafnasci          #+#    #+#             */
+/*   Updated: 2024/06/05 19:04:12 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 void	ft_free_split(char **av)
 {
@@ -34,17 +34,13 @@ int	main(int ac, char **av)
 	else if (ac == 2)
 		av = ft_splitt(av[1], ' ');
 	ft_stack_init(&a, av + 1);
-	if (!ft_stack_sorted(a))
-	{
-		if (ft_stack_len(a) == 2)
-			sa(&a);
-		else if (ft_stack_len(a) == 3)
-			ft_sort_3(&a);
-		else
-			ft_sort_all(&a, &b);
-	}
+	ft_check_inst(&a, &b);
 	if (ac == 2)
 		ft_free_split(av);
+	if (ft_stack_sorted(a) && ft_stack_len(b) == 0)
+		ft_printf("OK\n");
+	else if (!ft_stack_sorted(a))
+		ft_printf("KO\n");
 	ft_stack_free(&a);
 	ft_stack_free(&b);
 }
