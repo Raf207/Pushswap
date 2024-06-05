@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 16:17:22 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/05/29 14:59:27 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/06/04 17:35:10 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	ft_sort_all(t_stack_node **a, t_stack_node **b)
 		pb(b, a);
 	if (len_a-- > 3 && !ft_stack_sorted(*a))
 		pb(b, a);
-	while (len_a-- > 3 && ft_stack_sorted(*a))
+	while (len_a-- > 3 && !ft_stack_sorted(*a))
 	{
 		ft_init(*a, *b);
 		ft_a_to_b(a, b);

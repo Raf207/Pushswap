@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 17:00:16 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/05/21 20:31:45 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/05/30 22:39:21 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ static long	ft_atol(char *str)
 	i = 0;
 	if (str[i] == '-' || str[i] == '+')
 	{
-		if (str [i] == '-')
+		if (str[i++] == '-')
 			sign = -1;
 	}
-	while (str[++i])
-		res = (res * 10) + (str[i] - '0');
+	while (str[i])
+		res = (res * 10) + (str[i++] - '0');
 	return (sign * res);
 }
 

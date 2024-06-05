@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 17:04:58 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/05/21 20:31:23 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/05/30 22:44:13 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ int	ft_str_error(char *str_n)
 void	ft_invalid_input(t_stack_node **stack)
 {
 	ft_stack_free(stack);
-	ft_putstr_fd("invalid input\n", 2);
+	ft_putstr_fd("Error\n", 2);
 	exit(EXIT_FAILURE);
 }

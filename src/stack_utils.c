@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 19:07:56 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/05/23 13:57:42 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/06/04 17:08:01 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	ft_stack_len(t_stack_node *stack)
 	int	len;
 
 	len = 0;
-	while (stack->next)
+	while (stack)
 	{
 		len++;
 		stack = stack->next;
