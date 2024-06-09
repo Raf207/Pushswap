@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 14:24:48 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/06/05 19:04:12 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/06/09 15:23:12 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(int ac, char **av)
 		ft_free_split(av);
 	if (ft_stack_sorted(a) && ft_stack_len(b) == 0)
 		ft_printf("OK\n");
-	else if (!ft_stack_sorted(a))
+	else
 		ft_printf("KO\n");
 	ft_stack_free(&a);
 	ft_stack_free(&b);
