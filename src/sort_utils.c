@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 15:41:18 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/06/09 15:41:19 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/06/09 16:55:45 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,11 @@ void	ft_swap_cost(t_stack_node *a, t_stack_node *b)
 	{
 		a->cost = a->index;
 		if (!(a->above_median))
-			a->cost = len_a - (a->index);
+			a->cost = len_a - (a->index) + 1;
 		if (a->target_node->above_median)
 			a->cost += a->target_node->index;
 		else
-			a->cost += len_b - (a->target_node->index);
+			a->cost += len_b - (a->target_node->index) + 1;
 		a = a->next;
 	}
 }
