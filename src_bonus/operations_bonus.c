@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 15:51:52 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/06/05 15:54:10 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/06/09 15:42:11 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	ft_reverse_rotate(t_stack_node **stack)
 	last->prev = NULL;
 	(*stack) = last;
 }
+
 void	ft_rotate(t_stack_node **stack)
 {
 	t_stack_node	*last;

@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 14:43:05 by rafnasci          #+#    #+#             */
-/*   Updated: 2024/06/05 14:47:58 by rafnasci         ###   ########.fr       */
+/*   Updated: 2024/06/09 15:42:28 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ t_stack_node	*ft_stack_last(t_stack_node *stack)
 		stack = stack->next;
 	return (stack);
 }
-
 
 void	ft_stack_free(t_stack_node **a)
 {
