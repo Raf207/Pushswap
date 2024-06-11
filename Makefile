@@ -34,7 +34,7 @@ $(NAME) : $(OBJ)
 $(BONUS_NAME) : $(BONUS_OBJ) $(LIBFT)
 	@echo "\033[0;33m\nCOMPILING PUSH_SWAP_BONUS...\n"
 	@$(CC) $(CFLAGS) $(BONUS_OBJ) $(LIBFT) -o $(BONUS_NAME)
-	@echo "\033[1;32m./PUSH_SWAP_bonus created\n"
+	@echo "\033[1;32m./checker created\n"
 
 $(LIBFT)	:
 	@echo "\033[0;33m\nCOMPILING LIBFT\n"
